@@ -9,10 +9,13 @@ body {
   background-image: url('/images/crossword.png');
   background-repeat: repeat;
 }
+html {
+  background: #f5f5f5;
+}
 
-#container {
+.container {
   min-height: 510px;
-  padding: 50px;
+  padding: 50px 50px 15px 50px;
   padding-top: 30px;
   background-color: rgba(255, 255, 255, 0.40);
   background: #fff;
@@ -27,6 +30,7 @@ ul.header li {
   list-style-type: none;
   margin: 0;
 }
+
 
 .btn-outline-success {
   background-color: $standOutColor;
@@ -159,14 +163,16 @@ footer {
 }
 
 .footer-message {
-  a, a:visited {
-    color: $standOutColor;
-  }
+  /*max-width: 800px;*/
+  /*padding: 0 150px !important;*/
+  /*margin: 0 auto;*/
+  /*display: block;*/
+  width: 100%;
+}
 
-  a:hover{
-    color: $standOurLighterColor;
-    text-decoration: underline;
-  }
+a:hover {
+  color: $standOurLighterColor;
+  text-decoration: underline;
 }
 .header-row {
   background-color: $otherColor;
@@ -176,17 +182,33 @@ footer {
   margin: 0 auto;
   padding: 20px 0;
 }
-.home-mid-row {
+.middle {
   margin-top: 50px;
   text-align: center;
-  // font-size: 35px;
+  font-size: 35px;
+  position: relative;
+  right: 30px;
 }
+.right-home {
+  float: right;
+}
+
 .center {
   text-align: center;
+
 }
 .top-pad {
   padding-top: 40px;
   font-size: 25px;
+}
+.name {
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+.whole {
+  margin-top: 150px;
 }
 .input-field {
   width: 30%
@@ -194,28 +216,27 @@ footer {
 .top-pad p {
   margin: 50px 0;
 }
-.home-mid-row>p:nth-of-type(-n+2) {
-  font-size: 25px;
+.middle>p:nth-of-type(-n+2) {
+  font-size: 28px;
 }
-.home-mid-row>p:nth-of-type(3) {
-  margin-top: 65px;
-  font-size: 18px;
+.middle>p:nth-of-type(3) {
+  margin-top: 80px;
+  font-size: 24px;
 }
 .button {
   background: #ffffff;
   border: unset;
 }
+.button p {
+  margin-top: 15px;
+  font-size: 19px;
+}
 .image-clickable {
   width: 130px;
 }
-.home-mid-row form {
+.middle form {
   display: inline-block;
 }
-.input-bar {
-  min-width: 500px;
-  border: 1px solid black;
-}
-
 
 .pur-but-one,
 .pur-but-two,
@@ -293,8 +314,8 @@ footer {
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  padding: 30px;
-  font-size: 13px;
+  padding: 15px;
+  font-size: 14px;
   background: $otherColor;
   ul {
     margin-left: -15px;
@@ -302,8 +323,18 @@ footer {
     top: 15px;
   }
 }
+.body.two {
+  left: -15px;
+  position: relative;
+}
 .step {
-  display: none
+    position: absolute;
+    margin: 0 auto;
+    display: none;
+    width: 100%;
+    /*opacity: 0;*/
+    /*transition: visibility 0s, opacity 0.5s linear;*/
+
 }
 .one > div > h4,
 .one > div > p,
@@ -319,8 +350,8 @@ footer {
   font-size: 30px;
 }
 .home-button {
-  margin-top: 45px;
-  margin-bottom: -10px;
+  /*margin-top: 45px;*/
+  /*margin-bottom: -10px;*/
 }
 .home-button button {
   display: block;
@@ -359,14 +390,27 @@ footer {
 }
 .Logo {
   width: 350px;
+  /*position: relative;*/
+  /*top: 15px;*/
 }
 input[type=range] {
   -webkit-appearance: none;
-  margin: 18px 0;
-  width: 20%;
+  margin: 0 auto;
+  width: 25% !important;
 }
 input[type=range]:focus {
   outline: none;
+}
+#range-val-one {
+  margin-right: 5rem;
+}
+#range-val-threeb,
+#range-val-twob,
+#range-val-oneb {
+  margin-left: 5rem;
+}
+.slidecontainer > div {
+  margin-top: 30px;
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
@@ -458,18 +502,24 @@ input[type=range]:focus::-ms-fill-upper {
   margin-right: 50px;
 }
 .right {
-  margin-left: 50px;
+  margin-top: 50px;
+}
+.right > li {
+  list-style: none;
+  text-align: center;
+  line-height: 35px;
+  font-size: 15px;
 }
 .slidecontainer > span:nth-of-type(1) {
   position: relative;
   top: 50px;
-  left: 50px;
+  right: 15rem;
   color: #315b7d;
 }
 .slidecontainer > span:nth-of-type(2) {
   position: relative;
-  top: 50px;
-  right: 50px;
+  top: 5px;
+  left: 15rem;
   color: #315b7d;
 }
 
@@ -519,21 +569,33 @@ input[type=range]:focus::-ms-fill-upper {
   input[type=range] {
     width: 60% !important;
   }
-  .home-mid-row>p:nth-of-type(-n+2) {
+  .middle>p:nth-of-type(-n+2) {
     font-size: 19px !important;
   }
-  .home-mid-row > p:nth-of-type(3) {
-    margin-top: 35px !important;
+  .middle > p:nth-of-type(3) {
+    margi
+    .right {
+      float: right;
+    }
+      n-top: 35px !important;
     font-size: 15px !important;
   }
-  .image-clickable {
+  .image-
+  .right {
+    float: right;
+  }
+    clickable {
     width: 180px !important;
   }
-  .home-mid-row > form > button > p {
+  .middle > form > button > p {
     font-size: 20px !important;
   }
   .grey-box {
-    padding: 10px !important;
+    paddi
+    .right {
+      float: right;
+    }
+      ng: 10px !important;
     font-size: 12px !important;
   }
   .grey-box ul {
@@ -544,3 +606,4 @@ input[type=range]:focus::-ms-fill-upper {
     line-height: 25px !important;
   }
 }
+
