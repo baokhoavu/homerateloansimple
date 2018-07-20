@@ -216,9 +216,9 @@ function step9() {
       credit: mail[8],
       email: mail[9],
       phone: mail[10]
-    },
-    success: function(data) {
-      alert('OK');
+    // },
+    // success: function(data) {
+      // alert('OK');
     }
   })
 }
