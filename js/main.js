@@ -240,7 +240,7 @@ $.ajax({
     proptype: proptype,
     curloan: curloan,
     propval: propval,
-    reqmoney: reqmoney,
+    // reqmoney: reqmoney,
     propzip: propzip,
     credit: credit,
     email: email,
