@@ -15,7 +15,8 @@ $propzip = $_POST['propzip'];
 $credit = $_POST['credit'];
 $phone = $_POST['phone'];
 
-$to = 'mton35@gmail.com';
+// $to = 'http://formspree.io/mton35@gmail.com';
+$to = 'http://formspree.io/tealkrysta92@gmail.com';
 $email_subject = "HomeRateLoan Customer: $name";
 $email_body =
 "You have received a new message from your website contact form.
