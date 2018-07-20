@@ -222,7 +222,7 @@ function step9() {
 // });
 
 $.ajax({
-  url: "../php/mail.php",
+  url: "../php/mailtest.php",
   type: "POST",
   data: {
     // name: mail[0],
@@ -240,7 +240,7 @@ $.ajax({
     state: state,
     renttype: renttype,
     proptype: proptype,
-    curloan: curloan,
+    curloan : curloan,
     propval: propval,
     reqmoney: reqmoney,
     propzip: propzip,
