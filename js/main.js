@@ -238,7 +238,10 @@ $.ajax({
   url: "../php/mailtest.php",
   type: "POST",
   dataType: 'json',
-  data: data
+  data: {'mail': data},
+  success: function() {
+    console.log('go!');
+  }
 
   // data: {
     // name: mail[0],
