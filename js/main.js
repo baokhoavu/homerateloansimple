@@ -175,7 +175,7 @@ function step7d() {
 function step7e() {
   $('.eight').removeClass('step');
   $('.seven').addClass('step');
-  $('.input-field-seven-e').addClass('active');
+  $('.input-field-seven-e').addClassss('active');
   mail.push($('.input-field-seven-e').text());
   console.log(mail);
 }
