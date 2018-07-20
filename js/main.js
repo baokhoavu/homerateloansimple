@@ -217,12 +217,8 @@ function step9() {
       email: mail[9],
       phone: mail[10]
     },
-    cache: false,
-    success: function() {
-      console.log("success")
-    },
-    error: function() {
-      console.log('fail')
-    },
+    success: function(data) {
+      alert('OK');
+    }
   })
 }
