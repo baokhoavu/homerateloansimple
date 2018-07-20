@@ -219,35 +219,35 @@ function step9() {
     });
   });
 
-  $.ajax({
-    url: "../php/mail.php",
-    type: "POST",
-    data: {
-      // name: mail[0],
-      // state: mail[1],
-      // renttype: mail[2],
-      // proptype: mail[3],
-      // curloan: mail[4],
-      // propval: mail[5],
-      // reqmoney: mail[6],
-      // propzip: mail[7],
-      // credit: mail[8],
-      // email: mail[9],
-      // phone: mail[10]
-      name: name,
-      state: state,
-      renttype: renttype,
-      proptype: proptype,
-      curloan: curloan,
-      propval: propval,
-      reqmoney: reqmoney,
-      propzip: propzip,
-      credit: credit,
-      email: email,
-      phone: phone
-    // },
-    // success: function(data) {
-      // alert('OK');
-    }
-  })
+  // $.ajax({
+  //   url: "../php/mail.php",
+  //   type: "POST",
+  //   data: {
+  //     // name: mail[0],
+  //     // state: mail[1],
+  //     // renttype: mail[2],
+  //     // proptype: mail[3],
+  //     // curloan: mail[4],
+  //     // propval: mail[5],
+  //     // reqmoney: mail[6],
+  //     // propzip: mail[7],
+  //     // credit: mail[8],
+  //     // email: mail[9],
+  //     // phone: mail[10]
+  //     name: name,
+  //     state: state,
+  //     renttype: renttype,
+  //     proptype: proptype,
+  //     curloan: curloan,
+  //     propval: propval,
+  //     reqmoney: reqmoney,
+  //     propzip: propzip,
+  //     credit: credit,
+  //     email: email,
+  //     phone: phone
+  //   // },
+  //   // success: function(data) {
+  //     // alert('OK');
+  //   }
+  // })
 }
