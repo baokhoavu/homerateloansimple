@@ -220,11 +220,27 @@ function step9() {
 //     $('#project_table').html(data);
 //   });
 // });
+const data = {
+  name: name,
+  state: state,
+  renttype: renttype,
+  proptype: proptype,
+  curloan : curloan,
+  propval: propval,
+  reqmoney: reqmoney,
+  propzip: propzip,
+  credit: credit,
+  email: email,
+  phone: phone
+}
 
 $.ajax({
   url: "../php/mailtest.php",
   type: "POST",
-  data: {
+  dataType: 'json',
+  data: data
+
+  // data: {
     // name: mail[0],
     // state: mail[1],
     // renttype: mail[2],
@@ -236,20 +252,20 @@ $.ajax({
     // credit: mail[8],
     // email: mail[9],
     // phone: mail[10]
-    name: name,
-    state: state,
-    renttype: renttype,
-    proptype: proptype,
-    curloan : curloan,
-    propval: propval,
-    reqmoney: reqmoney,
-    propzip: propzip,
-    credit: credit,
-    email: email,
-    phone: phone
+    // name: name,
+    // state: state,
+    // renttype: renttype,
+    // proptype: proptype,
+    // curloan : curloan,
+    // propval: propval,
+    // reqmoney: reqmoney,
+    // propzip: propzip,
+    // credit: credit,
+    // email: email,
+    // phone: phone
   // },
   // success: function(data) {
     // alert('OK');
-  }
+  // }
 })
-}
+// }
