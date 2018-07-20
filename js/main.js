@@ -65,7 +65,7 @@ function step3a() {
   $('.three').addClass('step');
   mail.push($('.input-field-three-a').text());
   console.log(mail);
-  // $('.input-field-three-a').addClass('active');
+  $('.input-field-three-a').addClass('active');
 }
 
 function step3b() {
@@ -73,13 +73,13 @@ function step3b() {
   $('.three').addClass('step');
   mail.push($('.input-field-three-b').text());
   console.log(mail);
-  // $('.input-field-three-b').addClass('active');
+  $('.input-field-three-b').addClass('active');
 }
 
 function step4a() {
   $('.five').removeClass('step');
   $('.four').addClass('step');
-  // $('.input-field-four-a').addClass('active');
+  $('.input-field-four-a').addClass('active');
   mail.push($('.input-field-four-a').text());
   console.log(mail);
 }
@@ -95,7 +95,7 @@ function step4b() {
 function step4c() {
   $('.five').removeClass('step');
   $('.four').addClass('step');
-  // $('.input-field-four-c').addClass('active');
+  $('.input-field-four-c').addClass('active');
 mail.push($('.input-field-four-c').text());
   console.log(mail);
 }
@@ -103,7 +103,7 @@ mail.push($('.input-field-four-c').text());
 function step4d() {
   $('.five').removeClass('step');
   $('.four').addClass('step');
-  // $('.input-field-four-d').addClass('active');
+  $('.input-field-four-d').addClass('active');
   mail.push($('.input-field-four-d').text());
   console.log(mail);
 }
@@ -143,7 +143,7 @@ function step12() {
 function step7a() {
   $('.eight').removeClass('step');
   $('.seven').addClass('step');
-  // $('.input-field-seven-a').addClass('active');
+  $('.input-field-seven-a').addClass('active');
   mail.push($('.input-field-seven-a').text());
   console.log(mail);
 }
@@ -151,7 +151,7 @@ function step7a() {
 function step7b() {
   $('.eight').removeClass('step');
   $('.seven').addClass('step');
-  // $('.input-field-seven-b').addClass('active');
+  $('.input-field-seven-b').addClass('active');
   mail.push($('.input-field-seven-b').text());
   console.log(mail);
 }
@@ -159,7 +159,7 @@ function step7b() {
 function step7c() {
   $('.eight').removeClass('step');
   $('.seven').addClass('step');
-  // $('.input-field-seven-c').addClass('active');
+  $('.input-field-seven-c').addClass('active');
   mail.push($('.input-field-seven-c').text());
   console.log(mail);
 }
@@ -167,7 +167,7 @@ function step7c() {
 function step7d() {
   $('.eight').removeClass('step');
   $('.seven').addClass('step');
-  // $('.input-field-seven-d').addClass('active');
+  $('.input-field-seven-d').addClass('active');
   mail.push($('.input-field-seven-d').text());
   console.log(mail);
 }
@@ -175,7 +175,7 @@ function step7d() {
 function step7e() {
   $('.eight').removeClass('step');
   $('.seven').addClass('step');
-  // $('.input-field-seven-e').addClass('active');
+  $('.input-field-seven-e').addClass('active');
   mail.push($('.input-field-seven-e').text());
   console.log(mail);
 }
@@ -191,31 +191,60 @@ function step9() {
   $('.ten').removeClass('step');
   $('.nine').addClass('step');
   mail.push($('.input-field-nine').val());
-  // const name = $('.input-field-one').val();
-  // const state = $('.input-field-two').val();
-  // const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
-  // const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
-  // const curloan = $('.input-field-five').val();
-  // const propval = $('.input-field-six').val();
-  // const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
-  // const email = $('.input-field-eight').val();
-  // const phone = $('.input-field-nine').val();
+
+  const name = $('.input-field-one').val();
+  const state = $('.input-field-two').val();
+  const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
+  const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
+  const curloan = $('.input-field-five').val();
+  const propval = $('.input-field-six').val();
+  const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
+  const email = $('.input-field-eight').val();
+  const phone = $('.input-field-nine').val();
+
+  $.ajax({
+    url:'php/mail.php',
+    type: 'post',
+    data: {'aid' : aid},
+    done: function(data) {
+    // this is for testing
+    }
+    }).fail (function() {
+        alert('error');
+    }).always(function(data) {
+        alert(data);
+        $('#home_div').hide();
+        $('#pcd').fadeIn(1000);
+        $('#project_table').html(data);
+    });
+  });
 
   $.ajax({
     url: "../php/mail.php",
     type: "POST",
     data: {
-      name: mail[0],
-      state: mail[1],
-      renttype: mail[2],
-      proptype: mail[3],
-      curloan: mail[4],
-      propval: mail[5],
-      reqmoney: mail[6],
-      propzip: mail[7],
-      credit: mail[8],
-      email: mail[9],
-      phone: mail[10]
+      // name: mail[0],
+      // state: mail[1],
+      // renttype: mail[2],
+      // proptype: mail[3],
+      // curloan: mail[4],
+      // propval: mail[5],
+      // reqmoney: mail[6],
+      // propzip: mail[7],
+      // credit: mail[8],
+      // email: mail[9],
+      // phone: mail[10]
+      name: name,
+      state: state,
+      renttype: renttype,
+      proptype: proptype,
+      curloan: curloan,
+      propval: propval,
+      reqmoney: reqmoney,
+      propzip: propzip,
+      credit: credit,
+      email: email,
+      phone: phone
     // },
     // success: function(data) {
       // alert('OK');
