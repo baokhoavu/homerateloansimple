@@ -429,7 +429,7 @@ button {
   cursor: pointer;
 }
 input[type=range]::-webkit-slider-thumb {
-  // box-shadow: 1px 1px 1px #000000;
+  box-shadow: 1px 1px 1px #000000;
   border: 1px solid #000;
   height: 30px;
   width: 30px;
@@ -527,23 +527,31 @@ input[type=range]:focus::-ms-fill-upper {
   color: #00bfff;
 }
 
-// @media only screen and (max-width: 400px) {
-//   .footer-row {
-//     width: unset !important;
-//     font-size: 12px !important;
-//     color: green;
-//   }
-// }
 
-// @media (max-width: 400px) {
-//   .footer-row {
-//     width: unset !important;
-//     font-size: 12px !important;
-//     color: blue;
-//   }
-// }
-// @media (max-width: 400px) {
-@media #{$mobile} {
+@media only screen and (max-width: 400px) {
+  .footer-row {
+    width: unset !important;
+    font-size: 12px !important;
+    color: green;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-row {
+    width: unset !important;
+    font-size: 12px !important;
+    color: blue;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .blue-box {
+    padding: 25px;
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 400px) {
   #container {
     padding-bottom: 20px !important;
   }
@@ -573,37 +581,34 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 19px !important;
   }
   .middle > p:nth-of-type(3) {
-    margi
-    .right {
-      float: right;
-    }
-      n-top: 35px !important;
+    margin-top: 35px !important;
     font-size: 15px !important;
   }
-  .image-
-  .right {
+  .image-right {
     float: right;
   }
-    clickable {
+    .image-clickable {
     width: 180px !important;
   }
   .middle > form > button > p {
     font-size: 20px !important;
   }
   .grey-box {
-    paddi
-    .right {
-      float: right;
-    }
-      ng: 10px !important;
-    font-size: 12px !important;
+    padding: 10px !important;
+    font-size: 40px;
+    padding: 50px;
   }
   .grey-box ul {
     top: unset !important;
+  }
+  .blue-box {
+    padding: 25px;
+    font-size: 60px;
   }
   .home-right-list li {
     font-size: 13px !important;
     line-height: 25px !important;
   }
 }
+
 
