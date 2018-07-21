@@ -47,14 +47,14 @@ $mail->Username = 'testbaokhoa@gmail.com';
 //Password to use for SMTP authentication
 $mail->Password = 'test123test123';
 //Set who the message is to be sent from
-$mail->setFrom('info@homeratel.com');
+$mail->setFrom('testbaokhoa@gmail.com');
 //Set an alternative reply-to address
 $mail->addReplyTo('testbaokhoa@gmail.com');
 //Set who the message is to be sent to
 $mail->addAddress('testbaokhoa@gmail.com');
 //Set the subject line
 $mail->Subject = 'Home Rate Loan Website Customer';
-$mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
+$mail->Body = '<p>Customer from HomeRateLoan</p>' .
 '<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
 '<p>State: ' . $_POST['state'] . '</p>' . '\n' .
 '<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
