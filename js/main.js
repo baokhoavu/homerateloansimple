@@ -238,7 +238,8 @@ $.ajax({
     credit: credit,
     email: email,
     phone: phone
-  // },
+  },
+  dataType: 'json'
   // success: function(data) {
     // alert('OK');
   }
@@ -312,7 +313,7 @@ function step9r() {
 
 
 $.ajax({
-  url: "./mailtest.php",
+  url: "../php/mailtest.php",
   type: "POST",
   data: {
     // name: mail[0],
