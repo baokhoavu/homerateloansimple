@@ -18,7 +18,7 @@ require 'src/SMTP.php';
 require 'src/POP3.php';
 
 
-$mail = new PHPMailer;
+$mail = new PHPMailer(true);
 
 $mail->isSMTP();
 //Enable SMTP debugging
