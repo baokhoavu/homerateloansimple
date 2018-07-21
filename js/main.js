@@ -212,23 +212,6 @@ function step9p() {
   const email = $('.input-field-eight').val();
   const phone = $('.input-field-nine').val();
 
-//   $.ajax({
-//     url: 'php/mail.php',
-//     type: 'post',
-//     data: { 'aid': aid },
-//     done: function(data) {
-//       // this is for testing
-//     }
-//   }).fail(function() {
-//     alert('error');
-//   }).always(function(data) {
-//     alert(data);
-//     $('#home_div').hide();
-//     $('#pcd').fadeIn(1000);
-//     $('#project_table').html(data);
-//   });
-// });
-
 $.ajax({
   url: "../php/mailtest.php",
   type: "POST",
@@ -308,6 +291,7 @@ function step9r() {
         }
 
     }
+  })
 
 
 // $.ajax({
