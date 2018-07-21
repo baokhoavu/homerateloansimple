@@ -55,15 +55,16 @@ $mail->addAddress('testbaokhoa@gmail.com');
 //Set the subject line
 $mail->Subject = 'Home Rate Loan Website Customer';
 $mail->Body = '<p>Customer from HomeRateLoan</p>' .
+'<br' .
 '<p>Name: ' . $_POST['name'] . '</p>' .
 '<p>State: ' . $_POST['state'] . '</p>' .
 '<p>Rent Type: ' . $_POST['renttype'] . '</p>' .
-'<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
-'<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
-'<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
-'<p>Credit: ' . $_POST['credit'] . '</p>' . '\n' .
-'<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
-'<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
+'<p>Property Type: ' . $_POST['proptype'] . '</p>' .
+'<p>Required Money: ' . $_POST['reqmoney'] . '</p>' .
+'<p>Zip: ' . $_POST['propzip'] . '</p>' .
+'<p>Credit: ' . $_POST['credit'] . '</p>' .
+'<p>Email: ' . $_POST['email'] . '</p>' .
+'<p>Phone: ' . $_POST['phone'] . '</p>';
 // $mail->Body = 'This is my test';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 //Read an HTML message body from an external file, convert referenced images to embedded,
