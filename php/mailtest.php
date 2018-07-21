@@ -15,10 +15,10 @@ use PHPMailer\PHPMailer\POP3;
 
 require 'vendor/autoload.php';
 
-// require 'src/Exception.php'
-// require 'src/PHPMailer.php';
-// require 'src/SMTP.php';
-// require 'src/POP3.php';
+require 'src/Exception.php'
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+require 'src/POP3.php';
 
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -40,16 +40,16 @@ $mail->email_address('tealkrysta92@gmail.com');               // Name is optiona
 //Content
 $mail->isHTML(true);                                  // Set email format to HTML
 $mail->Subject = 'HomeRateLoan website customer';
-$mail->Body = '<p>Customer from HomeRateLoan</p>' . "\n" .
-'<p>Name: ' . $_POST['name'] . '</p>' . "\n" .
-'<p>State: ' . $_POST['state'] . '</p>' . "\n" .
-'<p>Rent Type: ' . $_POST['renttype'] . '</p>' . "\n" .
-'<p>Property Type: ' . $_POST['proptype'] . '</p>' . "\n" .
-'<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . "\n" .
-'<p>Zip: ' . $_POST['propzip'] . '</p>' . "\n" .
-'<p>Credit: ' . $_POST['credit'] . '</p>' . "\n" .
-'<p>Email: ' . $_POST['email'] . '</p>' . "\n" .
-'<p>Phone: ' . $_POST['phone'] . '</p>' . "\n";
+$mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
+'<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
+'<p>State: ' . $_POST['state'] . '</p>' . '\n' .
+'<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
+'<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
+'<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
+'<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
+'<p>Credit: ' . $_POST['credit'] . '</p>' . '\n' .
+'<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
+'<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
 // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
 // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
