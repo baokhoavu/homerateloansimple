@@ -337,10 +337,10 @@ $.ajax({
     credit: credit,
     email: email,
     phone: phone
-  },
-  dataType: 'html'
+  // },
+  // dataType: 'html'
   // success: function(data) {
     // alert('OK');
-  // }
+  }
 });
 }
