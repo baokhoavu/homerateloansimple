@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home Rate Loan</title>
   <link rel='stylesheet' href='../css/style.css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,7 +13,7 @@
 
 
   <div class="whole">
-          <div class="one">
+          <div class="first one">
             <div class="center top-pad name">
               <h4>*Refinance*</h4>
               <p>What is your name?</p>
@@ -150,7 +151,7 @@
                 <input type="range" min="60000" max="2000000" step="1000" class="slider input-field-six" id="myRange" onInput="updateTextInputTwo()"/>
                 <span>$2M+</span>
               </div>
-              <button onClick="step6()" class="pur-but-six" type="submit">Continue</button>
+              <button onClick="step6p()" class="pur-but-six" type="submit">Continue</button>
             </div>
           </div>
           <div class="step seven">
@@ -199,6 +200,11 @@
               <p>Thank you for completing the survey.</p>
             </div>
           </div>
+        <form class="home-button step-home-button ref-home" action="../">
+          <button>
+            <img class="Logo" src="../css/assets/Logo.png">
+          </button>
+        </form>
         </div>
 
   <script

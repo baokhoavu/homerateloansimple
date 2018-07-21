@@ -124,6 +124,14 @@ function step6() {
   console.log(mail);
 }
 
+function step6p() {
+  $('.seven').removeClass('step');
+  $('.six').addClass('step');
+  mail.push($('.input-field-six').val());
+  // console.log($('.input-field-six').val());
+  console.log(mail);
+}
+
 function step11() {
   $('.twelve').removeClass('step');
   $('.eleven').addClass('step');
@@ -187,7 +195,74 @@ function step8() {
   console.log(mail);
 }
 
-function step9() {
+function step9p() {
+  $('.ten').removeClass('step');
+  $('.nine').addClass('step');
+  mail.push($('.input-field-nine').val());
+
+  const name = $('.input-field-one').val();
+  const state = $('.input-field-two').val();
+  const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
+  const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
+  const reqmoney = $('.input-field-eleven').val();
+  // const propzip = $('.input-field-twelve').val();
+  const curloan = $('.input-field-five').val();
+  const propval = $('.input-field-six').val();
+  const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
+  const email = $('.input-field-eight').val();
+  const phone = $('.input-field-nine').val();
+
+//   $.ajax({
+//     url: 'php/mail.php',
+//     type: 'post',
+//     data: { 'aid': aid },
+//     done: function(data) {
+//       // this is for testing
+//     }
+//   }).fail(function() {
+//     alert('error');
+//   }).always(function(data) {
+//     alert(data);
+//     $('#home_div').hide();
+//     $('#pcd').fadeIn(1000);
+//     $('#project_table').html(data);
+//   });
+// });
+
+$.ajax({
+  url: "../php/mailtest.php",
+  type: "POST",
+  data: {
+    // name: mail[0],
+    // state: mail[1],
+    // renttype: mail[2],
+    // proptype: mail[3],
+    // curloan: mail[4],
+    // propval: mail[5],
+    // reqmoney: mail[6],
+    // propzip: mail[7],
+    // credit: mail[8],
+    // email: mail[9],
+    // phone: mail[10]
+    name: name,
+    state: state,
+    renttype: renttype,
+    proptype: proptype,
+    curloan : curloan,
+    propval: propval,
+    reqmoney: reqmoney,
+    // propzip: propzip,
+    credit: credit,
+    email: email,
+    phone: phone
+  // },
+  // success: function(data) {
+    // alert('OK');
+  }
+})
+}
+
+function step9r() {
   $('.ten').removeClass('step');
   $('.nine').addClass('step');
   mail.push($('.input-field-nine').val());
