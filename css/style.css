@@ -666,6 +666,9 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: 100px;
     font-size: 30px;
   }
+  .one > div > h4 {
+    transform: translateY(130%);
+  }
 }
 
 

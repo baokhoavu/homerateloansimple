@@ -196,7 +196,7 @@ function step8() {
 }
 
 function step9p() {
-  $('.ten').removeClass('step');
+  $('.step-home-button').addClass('step');
   $('.nine').addClass('step');
   mail.push($('.input-field-nine').val());
 
@@ -236,7 +236,7 @@ $.ajax({
 }
 
 function step9r() {
-  $('.ten').removeClass('step');
+  $('.step-home-button').addClass('step');
   $('.nine').addClass('step');
   mail.push($('.input-field-nine').val());
   const name = $('.input-field-one').val();
