@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 date_default_timezone_set('Etc/UTC');
 
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\Exception;
 // use PHPMailer\PHPMailer\SMTP;
 // use PHPMailer\PHPMailer\POP3;
 
@@ -16,6 +16,16 @@ use PHPMailer\PHPMailer\PHPMailer;
 require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 // require 'src/POP3.php';
+
+$name = $_POST['name'] . '</p>' . '\n' .
+$state = $_POST['state'] . '</p>' . '\n' .
+$renttype = $_POST['renttype'] . '</p>' . '\n' .
+$proptype = $_POST['proptype'] . '</p>' . '\n' .
+$reqmoney = $_POST['reqmoney'] . '</p>' . '\n' .
+$propzip = $_POST['propzip'] . '</p>' . '\n' .
+$credit = $_POST['credit'] . '</p>' . '\n' .
+$email = $_POST['email'] . '</p>' . '\n' .
+$phone = $_POST['phone'] . '</p>' . '\n';
 
 
 $mail = new PHPMailer();
@@ -37,23 +47,24 @@ $mail->Username = 'testbaokhoa@gmail.com';
 //Password to use for SMTP authentication
 $mail->Password = 'test123test123';
 //Set who the message is to be sent from
-$mail->setFrom('info@homerateloan', 'HomeRateLoan');
+$mail->setFrom('testbaokhoa@gmail.com');
 //Set an alternative reply-to address
-$mail->addReplyTo('tealkrysta92@gmail.com', 'Jeyde Vu');
+$mail->addReplyTo('testbaokhoa@gmail.com');
 //Set who the message is to be sent to
-$mail->addAddress('testbaokhoa@gmail.com', 'Jade Vu');
+$mail->addAddress('testbaokhoa@gmail.com');
 //Set the subject line
 $mail->Subject = 'PHPMailer SMTP test';
-$mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
-'<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
-'<p>State: ' . $_POST['state'] . '</p>' . '\n' .
-'<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
-'<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
-'<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
-'<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
-'<p>Credit: ' . $_POST['credit'] . '</p>' . '\n' .
-'<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
-'<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
+// $mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
+// '<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
+// '<p>State: ' . $_POST['state'] . '</p>' . '\n' .
+// '<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
+// '<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
+// '<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
+// '<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
+// '<p>Credit: ' . $_POST['credit'] . '</p>' . '\n' .
+// '<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
+// '<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
+$mail->Body = 'This is my test';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
