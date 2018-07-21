@@ -15,10 +15,10 @@ use PHPMailer\PHPMailer\POP3;
 
 require 'vendor/autoload.php';
 
-require 'src/Exception.php'
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
-require 'src/POP3.php';
+require '../src/Exception.php'
+require '../src/PHPMailer.php';
+require '../src/SMTP.php';
+require '../src/POP3.php';
 
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
