@@ -48,6 +48,6 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
-    // error_reporting(E_ALL); ini_set('display_errors', 1);
+    error_reporting(E_ALL); ini_set('display_errors', 1);
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
