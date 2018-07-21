@@ -51,7 +51,7 @@ $mail->setFrom('testbaokhoa@gmail.com');
 //Set an alternative reply-to address
 $mail->addReplyTo('testbaokhoa@gmail.com');
 //Set who the message is to be sent to
-$mail->addAddress('testbaokhoa@gmail.com');
+$mail->addAddress('mton35@gmail.com');
 //Set the subject line
 $mail->Subject = 'Home Rate Loan Website Customer';
 $mail->Body = '<p>Customer from HomeRateLoan</p>' .
