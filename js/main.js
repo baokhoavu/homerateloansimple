@@ -203,7 +203,8 @@ function step9p() {
   const name = $('.input-field-one').val();
   const state = $('.input-field-two').val();
   const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
-  const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
+  const proptype = mail[4]
+  // const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
   const reqmoney = $('.input-field-eleven').val();
   // const propzip = $('.input-field-twelve').val();
   const curloan = $('.input-field-five').val();
