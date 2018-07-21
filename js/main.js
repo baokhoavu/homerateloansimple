@@ -279,52 +279,66 @@ function step9r() {
   const email = $('.input-field-eight').val();
   const phone = $('.input-field-nine').val();
 
-//   $.ajax({
-//     url: 'php/mail.php',
-//     type: 'post',
-//     data: { 'aid': aid },
-//     done: function(data) {
-//       // this is for testing
-//     }
-//   }).fail(function() {
-//     alert('error');
-//   }).always(function(data) {
-//     alert(data);
-//     $('#home_div').hide();
-//     $('#pcd').fadeIn(1000);
-//     $('#project_table').html(data);
-//   });
-// });
+  $.ajax({
+    type: 'POST',
+    async: true,
+    url: '../php/mailtest.php',
+    data: {
+      name: name,
+      state: state,
+      renttype: renttype,
+      proptype: proptype,
+      curloan : curloan,
+      propval: propval,
+      reqmoney: reqmoney,
+      propzip: propzip,
+      credit: credit,
+      email: email,
+      phone: phone
+    },
+    datatype: 'json',
+    cache: true,
+    global: false,
+    success: function(data) {
+        if(data == 'success'){
+            console.log(data);
+        } else {
+            $('.no-config').show();
+            console.log(data);
+        }
 
-$.ajax({
-  url: "../php/mailtest.php",
-  type: "POST",
-  data: {
-    // name: mail[0],
-    // state: mail[1],
-    // renttype: mail[2],
-    // proptype: mail[3],
-    // curloan: mail[4],
-    // propval: mail[5],
-    // reqmoney: mail[6],
-    // propzip: mail[7],
-    // credit: mail[8],
-    // email: mail[9],
-    // phone: mail[10]
-    name: name,
-    state: state,
-    renttype: renttype,
-    proptype: proptype,
-    curloan : curloan,
-    propval: propval,
-    reqmoney: reqmoney,
-    propzip: propzip,
-    credit: credit,
-    email: email,
-    phone: phone
-  // },
-  // success: function(data) {
-    // alert('OK');
-  }
-})
+    }
+
+
+// $.ajax({
+//   url: "../php/mailtest.php",
+//   type: "POST",
+//   data: {
+//     // name: mail[0],
+//     // state: mail[1],
+//     // renttype: mail[2],
+//     // proptype: mail[3],
+//     // curloan: mail[4],
+//     // propval: mail[5],
+//     // reqmoney: mail[6],
+//     // propzip: mail[7],
+//     // credit: mail[8],
+//     // email: mail[9],
+//     // phone: mail[10]
+//     name: name,
+//     state: state,
+//     renttype: renttype,
+//     proptype: proptype,
+//     curloan : curloan,
+//     propval: propval,
+//     reqmoney: reqmoney,
+//     propzip: propzip,
+//     credit: credit,
+//     email: email,
+//     phone: phone
+//   // },
+//   // success: function(data) {
+//     // alert('OK');
+//   }
+// })
 }
