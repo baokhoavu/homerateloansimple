@@ -17,15 +17,15 @@ require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 // require 'src/POP3.php';
 
-$name = $_POST['name'] . '</p>' . '\n' .
-$state = $_POST['state'] . '</p>' . '\n' .
-$renttype = $_POST['renttype'] . '</p>' . '\n' .
-$proptype = $_POST['proptype'] . '</p>' . '\n' .
-$reqmoney = $_POST['reqmoney'] . '</p>' . '\n' .
-$propzip = $_POST['propzip'] . '</p>' . '\n' .
-$credit = $_POST['credit'] . '</p>' . '\n' .
-$email = $_POST['email'] . '</p>' . '\n' .
-$phone = $_POST['phone'] . '</p>' . '\n';
+$name = $_POST['name'];
+$state = $_POST['state'];
+$renttype = $_POST['renttype'];
+$proptype = $_POST['proptype'];
+$reqmoney = $_POST['reqmoney'];
+$propzip = $_POST['propzip'];
+$credit = $_POST['credit'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
 
 
 $mail = new PHPMailer();
