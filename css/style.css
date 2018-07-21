@@ -669,6 +669,9 @@ input[type=range]:focus::-ms-fill-upper {
   .one > div > h4 {
     transform: translateY(130%);
   }
+  .footer-row {
+    bottom: -25% !important;
+  }
 }
 
 
