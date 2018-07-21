@@ -48,6 +48,10 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
+    header('Content-Type: application/json');
     error_reporting(E_ALL); ini_set('display_errors', 1);
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    echo json_encode($vals, JSON_PRETTY_PRINT);
+    exit;
 }
+?>

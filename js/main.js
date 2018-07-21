@@ -338,7 +338,7 @@ $.ajax({
     email: email,
     phone: phone
   // },
-  // dataType: 'html'
+  dataType: 'json'
   // success: function(data) {
     // alert('OK');
   }
