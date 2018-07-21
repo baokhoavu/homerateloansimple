@@ -205,16 +205,14 @@ function step9p() {
   const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
   const proptype = mail[4];
   // const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
-  const reqmoney = $('.input-field-eleven').val();
   // const propzip = $('.input-field-twelve').val();
   const curloan = $('.input-field-five').val();
-  const propval = $('.input-field-six').val();
   const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
   const email = $('.input-field-eight').val();
   const phone = $('.input-field-nine').val();
 
 $.ajax({
-  url: "../php/mailtest.php",
+  url: "../purchase.php",
   type: "POST",
   data: {
     name: name,
@@ -222,8 +220,7 @@ $.ajax({
     renttype: renttype,
     proptype: proptype,
     curloan : curloan,
-    propval: propval,
-    reqmoney: reqmoney,
+    zipcode: zipcode,
     credit: credit,
     email: email,
     phone: phone
@@ -251,7 +248,7 @@ function step9r() {
   const email = $('.input-field-eight').val();
   const phone = $('.input-field-nine').val();
 $.ajax({
-  url: "../mailtest.php",
+  url: "../refinance.php",
   type: "POST",
   data: {
     name: name,
