@@ -216,17 +216,6 @@ $.ajax({
   url: "../php/mailtest.php",
   type: "POST",
   data: {
-    // name: mail[0],
-    // state: mail[1],
-    // renttype: mail[2],
-    // proptype: mail[3],
-    // curloan: mail[4],
-    // propval: mail[5],
-    // reqmoney: mail[6],
-    // propzip: mail[7],
-    // credit: mail[8],
-    // email: mail[9],
-    // phone: mail[10]
     name: name,
     state: state,
     renttype: renttype,
@@ -234,7 +223,6 @@ $.ajax({
     curloan : curloan,
     propval: propval,
     reqmoney: reqmoney,
-    // propzip: propzip,
     credit: credit,
     email: email,
     phone: phone
@@ -250,22 +238,6 @@ function step9r() {
   $('.ten').removeClass('step');
   $('.nine').addClass('step');
   mail.push($('.input-field-nine').val());
-
-  // const email = {};
-
-  //  email.name = $('.input-field-one').val();
-  //  email.state = $('.input-field-two').val();
-  //  email.renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
-  //  email.proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
-  //  email.curloan = $('.input-field-five').val();
-  //  email.propval = $('.input-field-six').val();
-  //  email.credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
-  //  email.reqmoney = $('.input-field-eleven').val();
-  //  email.propzip = $('.input-field-twelve').val();
-  //  email.email = $('.input-field-eight').val();
-  //  email.phone = $('.input-field-nine').val();
-
-
   const name = $('.input-field-one').val();
   const state = $('.input-field-two').val();
   const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
@@ -277,56 +249,10 @@ function step9r() {
   const propzip = $('.input-field-twelve').val();
   const email = $('.input-field-eight').val();
   const phone = $('.input-field-nine').val();
-
-  // $.ajax({
-  //   const data = email,
-  //   type: 'POST',
-  //   async: true,
-  //   url: '../php/mailtest.php',
-  //   data: JSON.stringify(data),
-  //   // data: {
-  //   //   name: name,
-  //   //   state: state,
-  //   //   renttype: renttype,
-  //   //   proptype: proptype,
-  //   //   curloan : curloan,
-  //   //   propval: propval,
-  //   //   reqmoney: reqmoney,
-  //   //   propzip: propzip,
-  //   //   credit: credit,
-  //   //   email: email,
-  //   //   phone: phone
-  //   // },
-  //   datatype: 'json',
-  //   cache: true,
-  //   global: false,
-  //   success: function(data) {
-  //       if(data == 'success'){
-  //           console.log(data);
-  //       } else {
-  //           $('.no-config').show();
-  //           console.log(data);
-  //       }
-
-  //   }
-  // })
-
-
 $.ajax({
   url: "../mailtest.php",
   type: "POST",
   data: {
-    // name: mail[0],
-    // state: mail[1],
-    // renttype: mail[2],
-    // proptype: mail[3],
-    // curloan: mail[4],
-    // propval: mail[5],
-    // reqmoney: mail[6],
-    // propzip: mail[7],
-    // credit: mail[8],
-    // email: mail[9],
-    // phone: mail[10]
     name: name,
     state: state,
     renttype: renttype,
@@ -339,9 +265,6 @@ $.ajax({
     email: email,
     phone: phone
   },
-  dataType: 'json'
-  // success: function(data) {
-    // alert('OK');
-  // }
-});
+    dataType: 'json'
+  });
 }
