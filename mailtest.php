@@ -47,7 +47,7 @@ $mail->Username = 'testbaokhoa@gmail.com';
 //Password to use for SMTP authentication
 $mail->Password = 'test123test123';
 //Set who the message is to be sent from
-$mail->setFrom('testbaokhoa@gmail.com');
+$mail->setFrom('info@homerateloan.com');
 //Set an alternative reply-to address
 $mail->addReplyTo('testbaokhoa@gmail.com');
 //Set who the message is to be sent to
