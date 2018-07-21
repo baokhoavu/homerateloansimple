@@ -55,9 +55,9 @@ $mail->addAddress('testbaokhoa@gmail.com');
 //Set the subject line
 $mail->Subject = 'Home Rate Loan Website Customer';
 $mail->Body = '<p>Customer from HomeRateLoan</p>' .
-'<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
-'<p>State: ' . $_POST['state'] . '</p>' . '\n' .
-'<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
+'<p>Name: ' . $_POST['name'] . '</p>' .
+'<p>State: ' . $_POST['state'] . '</p>' .
+'<p>Rent Type: ' . $_POST['renttype'] . '</p>' .
 '<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
 '<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
 '<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
