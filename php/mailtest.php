@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-try {
+
     //Server settings
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -50,8 +50,8 @@ try {
 
 
     $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    // error_reporting(E_ALL); ini_set('display_errors', 1);
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-}
+//     echo 'Message has been sent';
+// } catch (Exception $e) {
+//     // error_reporting(E_ALL); ini_set('display_errors', 1);
+//     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+// }
