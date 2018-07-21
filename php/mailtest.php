@@ -1,11 +1,5 @@
 <?php
 
-if($mail->send()){
-    echo 'Message has been sent';
-} else {
-    error_reporting(E_ALL); ini_set('display_errors', 1);
-}
-
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -13,13 +7,18 @@ use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\POP3;
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 require '../src/Exception.php'
 require '../src/PHPMailer.php';
 require '../src/SMTP.php';
 require '../src/POP3.php';
 
+if($mail->send()){
+    echo 'Message has been sent';
+} else {
+    error_reporting(E_ALL); ini_set('display_errors', 1);
+}
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
@@ -51,9 +50,9 @@ $mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
 '<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
 '<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
 // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-$mail->send();
+$mail->Send();
 
 
 
