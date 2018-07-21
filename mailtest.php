@@ -53,18 +53,18 @@ $mail->addReplyTo('testbaokhoa@gmail.com');
 //Set who the message is to be sent to
 $mail->addAddress('testbaokhoa@gmail.com');
 //Set the subject line
-$mail->Subject = 'PHPMailer SMTP test';
-// $mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
-// '<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
-// '<p>State: ' . $_POST['state'] . '</p>' . '\n' .
-// '<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
-// '<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
-// '<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
-// '<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
-// '<p>Credit: ' . $_POST['credit'] . '</p>' . '\n' .
-// '<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
-// '<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
-$mail->Body = 'This is my test';
+$mail->Subject = 'Home Rate Loan Website Customer';
+$mail->Body = '<p>Customer from HomeRateLoan</p>' . '\n' .
+'<p>Name: ' . $_POST['name'] . '</p>' . '\n' .
+'<p>State: ' . $_POST['state'] . '</p>' . '\n' .
+'<p>Rent Type: ' . $_POST['renttype'] . '</p>' . '\n' .
+'<p>Property Type: ' . $_POST['proptype'] . '</p>' . '\n' .
+'<p>Required Money: ' . $_POST['reqmoney'] . '</p>' . '\n' .
+'<p>Zip: ' . $_POST['propzip'] . '</p>' . '\n' .
+'<p>Credit: ' . $_POST['credit'] . '</p>' . '\n' .
+'<p>Email: ' . $_POST['email'] . '</p>' . '\n' .
+'<p>Phone: ' . $_POST['phone'] . '</p>' . '\n';
+// $mail->Body = 'This is my test';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
