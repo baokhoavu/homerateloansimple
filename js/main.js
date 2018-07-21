@@ -313,7 +313,7 @@ function step9r() {
 
 
 $.ajax({
-  url: "./mailtest.php",
+  url: "../mailtest.php",
   type: "POST",
   data: {
     // name: mail[0],

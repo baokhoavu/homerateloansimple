@@ -1,8 +1,8 @@
 <?php
 
 echo "hi";
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 // // Import PHPMailer classes into the global namespace
 // // These must be at the top of your script, not inside a function
