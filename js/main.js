@@ -265,7 +265,7 @@ function step9r() {
   $.ajax({
     type: 'POST',
     async: true,
-    url: '././php/mailtest.php',
+    url: '../php/mailtest.php',
     data: {
       name: name,
       state: state,
