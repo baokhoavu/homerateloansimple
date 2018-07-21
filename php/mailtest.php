@@ -10,12 +10,12 @@ try {
     //Server settings
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp1.https://homerateloansimple.herokuapp.com';  // Specify main and backup SMTP servers
+    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'baokhoadinhvu@gmail.com';                 // SMTP username
-    $mail->Password = '07opgTbafu46';                           // SMTP password
+    $mail->Username = 'testbaokhoa@gmail.com';                 // SMTP username
+    $mail->Password = 'test123test123';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 2525;                                    // TCP port to connect to
+    $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
     $mail->email_from('info@homerateloan.com', 'Mailer');     // Add a recipient
@@ -52,6 +52,6 @@ try {
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
-    error_reporting(E_ALL); ini_set('display_errors', 1);
+    // error_reporting(E_ALL); ini_set('display_errors', 1);
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
