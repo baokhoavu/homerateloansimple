@@ -18,7 +18,7 @@ require 'src/SMTP.php';
 // require 'src/POP3.php';
 
 
-$mail = new PHPMailer(true);
+$mail = new PHPMailer();
 
 $mail->isSMTP();
 //Enable SMTP debugging
@@ -37,7 +37,7 @@ $mail->Username = 'testbaokhoa@gmail.com';
 //Password to use for SMTP authentication
 $mail->Password = 'test123test123';
 //Set who the message is to be sent from
-$mail->setFrom('info@homerateloan', 'The Website');
+$mail->setFrom('info@homerateloan', 'HomeRateLoan');
 //Set an alternative reply-to address
 $mail->addReplyTo('tealkrysta92@gmail.com', 'Jeyde Vu');
 //Set who the message is to be sent to
