@@ -6,10 +6,12 @@ use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\POP3;
 
-require '../src/Exception.php'
-require '../src/PHPMailer.php';
-require '../src/SMTP.php';
-require '../src/POP3.php';
+require 'vendor/autoload.php';
+
+// require 'src/Exception.php'
+// require 'src/PHPMailer.php';
+// require 'src/SMTP.php';
+// require 'src/POP3.php';
 
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -45,13 +47,20 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
     // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    header('Content-Type: application/json');
-    error_reporting(E_ALL); ini_set('display_errors', 1);
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-    echo json_encode($vals, JSON_PRETTY_PRINT);
-    exit;
-}
+    if($mail->send()){
+        echo 'Message has been sent';
+    } else {
+        error_reporting(E_ALL); ini_set('display_errors', 1);
+    }
+
+
+
+//     echo 'Message has been sent';
+// } catch (Exception $e) {
+//     header('Content-Type: application/json');
+//     error_reporting(E_ALL); ini_set('display_errors', 1);
+//     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+//     echo json_encode($vals, JSON_PRETTY_PRINT);
+//     exit;
+// }
 ?>
