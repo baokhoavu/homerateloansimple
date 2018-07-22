@@ -248,9 +248,9 @@ function step9r() {
   const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
   const curloan = $('.input-field-five').val();
   const propval = $('.input-field-six').val();
-  const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
   const reqmoney = $('.input-field-eleven').val();
   const propzip = $('.input-field-twelve').val();
+  const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
   const email = $('.input-field-eight').val();
   const phone = $('.input-field-nine').val();
 $.ajax({
