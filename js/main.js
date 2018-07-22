@@ -211,7 +211,7 @@ function step9p() {
   const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
   const proptype = mail[4];
   // const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
-  // const propzip = $('.input-field-twelve').val();
+  const zipcode = $('.input-field-twelve').val();
   const curloan = $('.input-field-five').val();
   const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
   const email = $('.input-field-eight').val();
