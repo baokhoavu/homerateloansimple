@@ -229,6 +229,14 @@ a:hover {
   width: 165px !important;
   border: unset;
 }
+.buttons {
+  position: relative;
+  right: 2%;
+}
+.center-center {
+  position: relative;
+  right: 36px;
+}
 .button p {
   margin-top: 15px;
   font-size: 18px;
