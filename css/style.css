@@ -231,7 +231,10 @@ a:hover {
 }
 .button p {
   margin-top: 15px;
-  font-size: 19px;
+  font-size: 18px;
+  width: 120%;
+  position: relative;
+  right: 10%;
 }
 .image-clickable {
   width: 130px;
