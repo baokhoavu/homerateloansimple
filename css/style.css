@@ -362,7 +362,9 @@ a:hover {
     width: 100%;
     /*opacity: 0;*/
     /*transition: visibility 0s, opacity 0.5s linear;*/
-
+}
+.pur-but-three, .pur-but-four, .pur-but-seven {
+  background: #fff !important;
 }
 .one > div > h4,
 .one > div > p,
