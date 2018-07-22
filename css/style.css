@@ -226,6 +226,7 @@ a:hover {
 }
 .button {
   background: #ffffff;
+  width: 165px !important;
   border: unset;
 }
 .button p {
@@ -671,6 +672,9 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .footer-row {
     bottom: -25% !important;
+  }
+  .button {
+    width: initial !important;
   }
 }
 

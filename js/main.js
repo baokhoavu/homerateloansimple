@@ -45,10 +45,16 @@ function updateRangeThree() {
 
 
 function step1() {
+  // let nameVal = $('.input-field-one').val();
+  // let nameCount = nameVal.length;
+  // if ( nameCount > 0 ) {
   $('.two').removeClass('step');
   $('.one').addClass('step');
-  mail.push($('.input-field-one').val());
-  console.log(mail);
+  // mail.push($('.input-field-one').val());
+  // console.log(mail);
+  // } else {
+  //   $('.input-field-one').append('<div style="color: red; position: absolute;">Required.</div>');
+  // }
 }
 
 function step2() {
