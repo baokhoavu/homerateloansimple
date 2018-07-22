@@ -22,7 +22,7 @@ $state = $_POST['state'];
 $renttype = $_POST['renttype'];
 $proptype = $_POST['proptype'];
 $reqmoney = $_POST['reqmoney'];
-$propzip = $_POST['propzip'];
+$zipcode = $_POST['zipcode'];
 $credit = $_POST['credit'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
@@ -62,7 +62,7 @@ $mail->Body = '<p>Customer from HomeRateLoan</p>' .
 '<p>Rent Type: ' . $_POST['renttype'] . '</p>' .
 '<p>Property Type: ' . $_POST['proptype'] . '</p>' .
 '<p>Required Money: ' . $_POST['reqmoney'] . '</p>' .
-'<p>Zip: ' . $_POST['propzip'] . '</p>' .
+'<p>Zipcode: ' . $_POST['zipcode'] . '</p>' .
 '<p>Credit: ' . $_POST['credit'] . '</p>' .
 '<p>Email: ' . $_POST['email'] . '</p>' .
 '<p>Phone: ' . $_POST['phone'] . '</p>';
