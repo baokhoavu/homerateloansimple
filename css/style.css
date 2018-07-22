@@ -9,6 +9,9 @@ body {
   background-image: url('/images/crossword.png');
   background-repeat: repeat;
 }
+input[type=text] {
+  border: 1px solid black;
+}
 html {
   background: #f5f5f5;
 }
@@ -565,7 +568,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
-@media screen and (max-width: 400px) {
+@media and (max-width: 400px) {
   #container {
     padding-bottom: 20px !important;
   }
@@ -620,50 +623,50 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 20px !important;
   }
   .image-right {
-    float: right;
+    float: right !important;
   }
   .image-clickable {
-    width: 180px;
+    width: 180px !important;
   }
   .middle {
-    width: 100%;
-    margin-left: 28px;
+    width: 100% !important;
+    margin-left: 28px !important;
   }
   .middle > form {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
   .middle > form > button > p {
     font-size: 28px !important;
   }
   .grey-box {
     padding: 10px !important;
-    font-size: 20px;
-    padding: 50px;
+    font-size: 20px !important;
+    padding: 50px !important;
   }
   .grey-box ul {
     top: unset !important;
   }
   .blue-box {
-    padding: 25px;
+    padding: 25px !important;
     /*font-size: 60px;*/
   }
   .right-home {
-    float: unset;
-    padding-bottom: 20px;
-    text-align: center;
+    float: unset !important;
+    padding-bottom: 20px !important;
+    text-align: center !important;
   }
   .right-home li {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .ref-home {
-    top: 105%;
-    margin-left: 5%;
+    top: 105% !important;
+    margin-left: 5% !important;
   }
   #range-val-one, #range-val-two, #range-val-three {
-    margin-right: unset;
+    margin-right: unset !important;
   }
   #range-val-threeb, #range-val-twob, #range-val-oneb {
-    margin-left: unset;
+    margin-left: unset !important;
   }
   /*.slidecontainer > div {
     margin-right: 30px;
