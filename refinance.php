@@ -45,15 +45,15 @@ $mail->Port = 587;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = 'testbaokhoa@gmail.com';
+$mail->Username = '';
 //Password to use for SMTP authentication
-$mail->Password = 'test123test123';
+$mail->Password = '';
 //Set who the message is to be sent from
-$mail->setFrom('testbaokhoa@gmail.com');
+$mail->setFrom('');
 //Set an alternative reply-to address
-$mail->addReplyTo('testbaokhoa@gmail.com');
+$mail->addReplyTo('');
 //Set who the message is to be sent to
-$mail->addAddress('mton35@gmail.com');
+$mail->addAddress('');
 // $mail->addAddress('testbaokhoa@gmail.com');
 //Set the subject line
 $mail->Subject = 'Home Rate Loan Website Customer';
