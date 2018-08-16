@@ -15,7 +15,7 @@ $propzip = $_POST['propzip'];
 $credit = $_POST['credit'];
 $phone = $_POST['phone'];
 
-// $to = 'http://formspree.io/mton35@gmail.com';
+// $to = '';
 $to = '';
 $email_subject = "HomeRateLoan Customer: $name";
 $email_body =
